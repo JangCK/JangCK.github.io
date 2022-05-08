@@ -102,13 +102,13 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "JangCK"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
+  bio              : "삶은 언제나 은총의 돌층계의 어디쯤이다."
   location         : "Somewhere"
   email            :
   links:
-    - label: "Email"
+    - label: "jangchoonkwon@gmail.com"
       icon: "fas fa-fw fa-envelope-square"
       # url: "mailto:your.name@email.com"
     - label: "Website"
