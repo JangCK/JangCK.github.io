@@ -61,5 +61,3 @@ ErrorHandler:
     MsgBox "An error occurred: " & Err.Description
 
 End Sub
-
-
