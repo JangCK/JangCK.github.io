@@ -1,0 +1,65 @@
+---
+published: true
+---
+```vba
+Option Explicit
+Sub GetLinkedData()
+
+    Dim ws As Worksheet
+    Set ws = ActiveWorkbook.ActiveSheet
+
+    Dim lastRow As Long
+    lastRow = ws.Cells(ws.Rows.Count, "B").End(xlUp).Row
+
+    Dim i As Long
+    Dim hl As Hyperlink
+    Dim linkedWb As Workbook
+    Dim baseDir As String
+    baseDir = "D:\FineTec\11_DailyLoss_P3-PH1\일일로스_S-Gas_P3-PH1_1201_rev\excel_all\"
+
+    Application.ScreenUpdating = False
+    Application.EnableEvents = False
+
+    On Error GoTo ErrorHandler
+
+    For i = 2 To lastRow
+        ' Check if cell contains hyperlink
+        If ws.Cells(i, "B").Hyperlinks.Count > 0 Then
+            Set hl = ws.Cells(i, "B").Hyperlinks(1)
+            
+            ' Open linked workbook
+            Set linkedWb = Workbooks.Open(baseDir & hl.TextToDisplay)
+
+            ' Get the range values and paste to the active sheet directly
+            With linkedWb.Sheets("일일출역현황")
+                ws.Cells(i, "C").Value = .Cells(1, "AN").Value
+                ws.Cells(i, "D").Value = .Cells(2, "AN").Value
+                ws.Cells(i, "E").Value = .Cells(3, "AN").Value
+                ws.Cells(i, "F").Value = .Cells(4, "AN").Value
+                ws.Cells(i, "G").Value = .Cells(5, "AN").Value
+                ws.Cells(i, "H").Value = .Cells(6, "AN").Value
+                ws.Cells(i, "I").Value = .Cells(7, "AN").Value
+                ws.Cells(i, "J").Value = .Cells(8, "AN").Value
+            End With
+
+            ' Close the linked workbook without saving changes
+            linkedWb.Close SaveChanges:=False
+
+            ' Clear memory
+            Set linkedWb = Nothing
+        End If
+    Next i
+
+    Application.EnableEvents = True
+    Application.ScreenUpdating = True
+
+    ' Clear the memory
+    Set ws = Nothing
+
+    Exit Sub
+
+ErrorHandler:
+    MsgBox "An error occurred: " & Err.Description
+
+End Sub
+```
