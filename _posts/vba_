@@ -1,6 +1,7 @@
 ---
 published: false
 ---
+```vba
 Option Explicit
 Sub GetLinkedData()
 
@@ -61,3 +62,4 @@ ErrorHandler:
     MsgBox "An error occurred: " & Err.Description
 
 End Sub
+```
