@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "삶은 언제나"
+title                    : "파인텍_JCK"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JangCK"
-description              : "삶은 언제나 은총의 돌층계의 어디쯤이다"
+description              : "Fine-tech_Code Snippet"
 url                      : "https://JangCK.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
