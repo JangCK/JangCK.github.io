@@ -8,11 +8,11 @@
 # Theme Settings
 #
 # Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+# https://sighingnow.github.io/jekyll-gitbook
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+# theme                  : "Jekyll Gitbook"
+# remote_theme           : "sighingnow/jekyll-gitbook"
 
 # Site Settings
 locale                   : "en-US"
